@@ -1,0 +1,18 @@
+
+<div id='currecny-widget' class="coinmarketcap-currency-widget" data-base="USD" data-currency= "bitcoin" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+  var currencyValue = getUrlVars()["type"];
+  //$('.coinmarketcap-currency-widget').data('data', { currency: currency });
+  //$('.coinmarketcap-currency-widget').attr("data-currency", currencyValue);
+  $('#currecny-widget').attr("data-currency", currencyValue);
+</script>
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
